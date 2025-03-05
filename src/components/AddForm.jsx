@@ -33,21 +33,24 @@ const AddForm = () => {
 
   return (
     <>
-      <div className="flex gap-2 justify-center items-center pt-6">
-        <input
-          type="text"
-          placeholder="Buscar imagen"
-          className="border border-gray-300 rounded-lg p-2"
-          value={search}
-          onChange={handleSearch}
-        />
+      <div className="flex gap-2 justify-between items-center px-10 pt-6">
+        <h1 className="text-2xl font-bold">Sebastian Medina Garcia</h1>
+        <div className="flex gap-2">
+          <input
+            type="text"
+            placeholder="Buscar imagen"
+            className="border border-gray-300 rounded-lg p-2"
+            value={search}
+            onChange={handleSearch}
+          />
 
-        <button
-          className="bg-blue-500 text-white rounded-lg p-2 hover:bg-blue-700"
-          onClick={handleAddImg}
-        >
-          Agregar
-        </button>
+          <button
+            className="bg-blue-500 text-white rounded-lg p-2 hover:bg-blue-700"
+            onClick={handleAddImg}
+          >
+            Agregar
+          </button>
+        </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-4">
         {imgs.map((img, index) => (
