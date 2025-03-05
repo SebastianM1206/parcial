@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Img from "./Img";
-
+import { Link } from "react-router";
 const AddForm = () => {
   const [search, setSearch] = useState("");
   const [allImgs, setAllImgs] = useState([
@@ -34,7 +34,12 @@ const AddForm = () => {
   return (
     <>
       <div className="flex gap-2 justify-between items-center px-10 pt-6">
-        <h1 className="text-2xl font-bold">Sebastian Medina Garcia</h1>
+        <div className="flex gap-2 items-center">
+          <button className="bg-blue-500 text-white rounded-lg p-2 hover:bg-blue-700">
+            <Link to="/">Atras</Link>
+          </button>
+          <h1 className="text-2xl font-bold">Sebastian Medina Garcia</h1>
+        </div>
         <div className="flex gap-2">
           <input
             type="text"
